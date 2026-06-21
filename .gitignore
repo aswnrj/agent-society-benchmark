@@ -1,0 +1,15 @@
+# Downloaded simulator binary (machine-specific, ~22M)
+.agentsociety/
+
+# Generated map cache (rebuilt from map.pb on first load, ~7M)
+map.pb.cache
+
+# Simulator logs
+logs/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
