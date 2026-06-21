@@ -1,4 +1,4 @@
-from mosstool.map.osm import RoadNet, Building
+from mosstool.map.osm import RoadNet, Building, PointOfInterest
 from mosstool.map.builder import Builder
 from mosstool.util.format_converter import dict2pb
 from mosstool.type import Map
@@ -26,7 +26,12 @@ roadnet = rn.create_road_net()
 bld = Building(proj_str=projstr, max_latitude=max_lat, min_latitude=min_lat, max_longitude=max_lon, min_longitude=min_lon, proxies=None)
 aois = bld.create_building()
 
-m = Builder(net=roadnet, aois=aois, pois=[], proj_str=projstr).build("bench_map")
+poi = PointOfInterest(
+    max_longitude=max_lon, min_longitude=min_lon,
+    max_latitude=max_lat, min_latitude=min_lat, proxies=None,
+)
+pois = poi.create_pois()   
+m = Builder(net=roadnet, aois=aois, pois=pois, proj_str=projstr).build("bench_map")
 
 with open("map.pb", "wb") as f:
     f.write(dict2pb(m, Map()).SerializeToString())

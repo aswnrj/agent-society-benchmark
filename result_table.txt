@@ -1,0 +1,12 @@
+[run] N=10: warmup=1 measure=3 ...
+[run] N=10 done: per_step mean=4.23s sd=0.17s
+[run] N=100: warmup=1 measure=3 ...
+[run] N=100 done: per_step mean=10.30s sd=0.50s
+[run] N=1000: warmup=1 measure=3 ...
+[run] N=1000 done: per_step mean=33.73s sd=1.18s
+
+     N | measured |  ticks | per_step(s) |    sd(s) | per_tick(s)
+-----------------------------------------------------------------
+    10 |        3 |    300 |        4.23 |     0.17 |     0.01410
+   100 |        3 |    300 |       10.30 |     0.50 |     0.03433
+  1000 |        3 |    300 |       33.73 |     1.18 |     0.11245
