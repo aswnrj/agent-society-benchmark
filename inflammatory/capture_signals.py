@@ -1,4 +1,4 @@
-import asyncio, json, time
+import asyncio, json, os, time
 from agentsociety.cityagent import default, SocietyAgent
 from agentsociety.configs import AgentsConfig, Config, EnvConfig, ExpConfig, LLMConfig, MapConfig
 from agentsociety.configs.agent import AgentConfig
@@ -8,10 +8,10 @@ from agentsociety.llm import LLMProviderType
 from agentsociety.simulation import AgentSociety
 from agentsociety.storage import DatabaseConfig
 
-NUM_CITIZENS = 30
-CAPTURE_STEPS = 25
-OUT = "llm_signals.jsonl"
-PROMPTS_OUT = "prompts_head.jsonl"
+NUM_CITIZENS = int(os.environ.get("NUM_CITIZENS", 30))
+CAPTURE_STEPS = int(os.environ.get("CAPTURE_STEPS", 25))
+OUT = os.environ.get("OUT", "llm_signals.jsonl")
+PROMPTS_OUT = os.environ.get("PROMPTS_OUT", "prompts_head.jsonl")
 PREFIX_CHARS = 2000
 
 _STEP = {"i": -1}
@@ -87,3 +87,5 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+
+

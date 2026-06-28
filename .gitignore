@@ -34,3 +34,7 @@ inflammatory/_run_watch.sh
 # Capture-run raw dumps (regenerable; prompts_head contains raw model I/O)
 inflammatory/llm_signals.jsonl
 inflammatory/prompts_head.jsonl
+
+# Per-agent-count sweep raw dumps
+inflammatory/llm_signals_n*.jsonl
+inflammatory/p*.jsonl
