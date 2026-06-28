@@ -1,0 +1,28 @@
+Many-agent LLM execution characterization
+agents per lock-step: 34 (30 citizens + 4 institution agents)
+steps: 25 | total LLM calls captured: 1607
+
+Generations per agent per lock-step
+  LLM calls per lock-step  : 64.3
+  LLM calls per agent      : 1.89
+  LLM calls per citizen    : 2.14
+
+Token distribution (per LLM call)
+             mean    p50    p90    p95    p99    max
+  input       316    279    409    416    618    641
+  output       54     49     78    153    171    184
+  latency seconds: mean 0.86  p95 1.55
+
+KV-cache memory
+  KV per token         : 56 KiB
+  mean seq (in+out)    : 370 tokens -> 20.2 MiB/request
+  p95 seq  (in+out)    : 569 tokens -> 31.1 MiB/request
+  KV budget (GPU 80GB) : 56.8 GB after model weights
+  max concurrent requests @ mean seq : 2,875
+  max concurrent requests @ p95 seq  : 1,869
+
+Prefix-reuse (character-level proxy on prompt heads)
+  mean prompt head length       : 957 chars
+  global common prefix (all)    : 0 chars
+  adjacent common prefix        : mean 243  p95 473 chars
+  exact-duplicate prompt rate   : 21.0%
