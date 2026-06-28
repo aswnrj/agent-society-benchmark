@@ -18,3 +18,19 @@ agentsociety_data/
 .env
 
 *.log
+# Downloaded paper + Windows metadata
+2502.08691v2.pdf
+*Zone.Identifier
+
+# Editor
+.vscode/
+
+# Heavy raw dumps / temp experiment artifacts
+inflammatory/memories*.json
+inflammatory/chat_histories*.json
+inflammatory/tmpsave*.json
+inflammatory/_run_watch.sh
+
+# Capture-run raw dumps (regenerable; prompts_head contains raw model I/O)
+inflammatory/llm_signals.jsonl
+inflammatory/prompts_head.jsonl
