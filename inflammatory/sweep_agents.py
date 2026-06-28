@@ -1,15 +1,11 @@
-import json, csv, glob, re, statistics as st
+import json, csv, glob, os, re, statistics as st
 
 LAYERS, KV_HEADS, HEAD_DIM, DTYPE_BYTES = 28, 4, 128, 2
 KV_PER_TOKEN_BYTES = 2 * LAYERS * KV_HEADS * HEAD_DIM * DTYPE_BYTES
 MODEL_WEIGHTS_GB = 15.2
 GPU_MEMORY_GB = 80
 GPU_UTIL = 0.90
-
-
-def percentile(xs, p):
-    xs = sorted(xs)
-    return xs[min(len(xs) - 1, int(p / 100 * len(xs)))]
+NUM_GPUS = int(os.environ.get("NUM_GPUS", 1))  # tensor-parallel size
 
 
 def main():
@@ -19,7 +15,7 @@ def main():
         print("no llm_signals_n*.jsonl files found")
         return
 
-    kv_budget_gb = GPU_MEMORY_GB * GPU_UTIL - MODEL_WEIGHTS_GB
+    kv_budget_gb = NUM_GPUS * GPU_MEMORY_GB * GPU_UTIL - MODEL_WEIGHTS_GB
     rows = []
     for f in files:
         sig = [json.loads(l) for l in open(f)]
@@ -46,6 +42,7 @@ def main():
     cols = list(rows[0].keys())
     width = {c: max(len(c), max(len(str(r[c])) for r in rows)) for c in cols}
     line = "  ".join(c.rjust(width[c]) for c in cols)
+    print(f"# KV budget: tensor-parallel x{NUM_GPUS} (A100 {GPU_MEMORY_GB}GB) = {kv_budget_gb:.0f} GB")
     print(line)
     print("-" * len(line))
     for r in rows:

@@ -1,4 +1,5 @@
 Many-agent LLM execution characterization
+serving: Qwen2.5-7B-Instruct, tensor-parallel x4 (A100 80GB)
 agents per lock-step: 34 (30 citizens + 4 institution agents)
 steps: 25 | total LLM calls captured: 1607
 
@@ -17,12 +18,13 @@ KV-cache memory
   KV per token         : 56 KiB
   mean seq (in+out)    : 370 tokens -> 20.2 MiB/request
   p95 seq  (in+out)    : 569 tokens -> 31.1 MiB/request
-  KV budget (GPU 80GB) : 56.8 GB after model weights
-  max concurrent requests @ mean seq : 2,875
-  max concurrent requests @ p95 seq  : 1,869
+  KV budget (TPx4) : 272.8 GB after model weights
+  max concurrent requests @ mean seq : 13,812
+  max concurrent requests @ p95 seq  : 8,977
 
-Prefix-reuse (character-level proxy on prompt heads)
-  mean prompt head length       : 957 chars
-  global common prefix (all)    : 0 chars
-  adjacent common prefix        : mean 243  p95 473 chars
-  exact-duplicate prompt rate   : 21.0%
+Prompt templates / prefix reuse
+  distinct template families (60-char) : 56
+  top-1 family share                   : 47%
+  top-5 family share                   : 86%
+  adjacent common prefix (chars)       : mean 243  p95 473
+  exact-duplicate prompt rate          : 21.0%

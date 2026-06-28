@@ -1,4 +1,4 @@
-import json, csv, statistics as st
+import json, csv, os, statistics as st
 
 # Qwen2.5-7B-Instruct (GQA, bf16)
 LAYERS, KV_HEADS, HEAD_DIM, DTYPE_BYTES = 28, 4, 128, 2
@@ -6,6 +6,7 @@ KV_PER_TOKEN_BYTES = 2 * LAYERS * KV_HEADS * HEAD_DIM * DTYPE_BYTES
 MODEL_WEIGHTS_GB = 15.2
 GPU_MEMORY_GB = 80
 GPU_UTIL = 0.90
+NUM_GPUS = int(os.environ.get("NUM_GPUS", 1))  # tensor-parallel size
 
 SIGNALS_FILE = "llm_signals.jsonl"
 PROMPTS_FILE = "prompts_head.jsonl"
@@ -44,19 +45,21 @@ def main():
     p95_seq = percentile(ins, 95) + percentile(outs, 95)
     kv_req_mean = mean_seq * KV_PER_TOKEN_BYTES
     kv_req_p95 = p95_seq * KV_PER_TOKEN_BYTES
-    kv_budget_gb = GPU_MEMORY_GB * GPU_UTIL - MODEL_WEIGHTS_GB
+    kv_budget_gb = NUM_GPUS * GPU_MEMORY_GB * GPU_UTIL - MODEL_WEIGHTS_GB
     max_conc_mean = int(kv_budget_gb * 1024 ** 3 / kv_req_mean)
     max_conc_p95 = int(kv_budget_gb * 1024 ** 3 / kv_req_p95)
 
     heads = [r["head"] for r in prm]
-    global_prefix = heads[0]
-    for h in heads[1:]:
-        global_prefix = h[:longest_common_prefix(global_prefix, h)]
+    families = {}
+    for h in heads:
+        families[h[:60]] = families.get(h[:60], 0) + 1
+    n_families = len(families)
+    top1 = max(families.values()) / len(heads)
+    top5 = sum(sorted(families.values(), reverse=True)[:5]) / len(heads)
     adj = []
     for s in steps:
         hs = sorted(p["head"] for p in prm if p["step"] == s)
         adj += [longest_common_prefix(hs[i], hs[i + 1]) for i in range(len(hs) - 1)]
-    mean_head_len = st.mean(len(h) for h in heads)
     dup_rate = 1 - len(set(heads)) / len(heads)
 
     out = []
@@ -64,6 +67,7 @@ def main():
         out.append(s)
 
     w("Many-agent LLM execution characterization")
+    w(f"serving: Qwen2.5-7B-Instruct, tensor-parallel x{NUM_GPUS} (A100 {GPU_MEMORY_GB}GB)")
     w(f"agents per lock-step: {n_agents} ({n_citizens} citizens + "
       f"{n_agents - n_citizens} institution agents)")
     w(f"steps: {n_steps} | total LLM calls captured: {len(sig)}")
@@ -85,15 +89,16 @@ def main():
     w(f"  KV per token         : {KV_PER_TOKEN_BYTES / 1024:.0f} KiB")
     w(f"  mean seq (in+out)    : {mean_seq:.0f} tokens -> {kv_req_mean / 1024 ** 2:.1f} MiB/request")
     w(f"  p95 seq  (in+out)    : {p95_seq:.0f} tokens -> {kv_req_p95 / 1024 ** 2:.1f} MiB/request")
-    w(f"  KV budget (GPU {GPU_MEMORY_GB}GB) : {kv_budget_gb:.1f} GB after model weights")
+    w(f"  KV budget (TPx{NUM_GPUS}) : {kv_budget_gb:.1f} GB after model weights")
     w(f"  max concurrent requests @ mean seq : {max_conc_mean:,}")
     w(f"  max concurrent requests @ p95 seq  : {max_conc_p95:,}")
     w("")
-    w("Prefix-reuse (character-level proxy on prompt heads)")
-    w(f"  mean prompt head length       : {mean_head_len:.0f} chars")
-    w(f"  global common prefix (all)    : {len(global_prefix)} chars")
-    w(f"  adjacent common prefix        : mean {st.mean(adj):.0f}  p95 {percentile(adj, 95)} chars")
-    w(f"  exact-duplicate prompt rate   : {100 * dup_rate:.1f}%")
+    w("Prompt templates / prefix reuse")
+    w(f"  distinct template families (60-char) : {n_families}")
+    w(f"  top-1 family share                   : {100 * top1:.0f}%")
+    w(f"  top-5 family share                   : {100 * top5:.0f}%")
+    w(f"  adjacent common prefix (chars)       : mean {st.mean(adj):.0f}  p95 {percentile(adj, 95)}")
+    w(f"  exact-duplicate prompt rate          : {100 * dup_rate:.1f}%")
 
     report = "\n".join(out)
     print(report)
