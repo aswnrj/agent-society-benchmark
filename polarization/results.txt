@@ -1,0 +1,30 @@
+Polarization experiment - control arm results
+AgentSociety paper Section 7.2 / Figure 16 (gun control)
+
+Model : Qwen/Qwen2.5-14B-Instruct (local vLLM)   [paper used DeepSeek-V3]
+Citizens : 100    Run : 3 simulated days
+Raw data : control_artifacts.json    Per-agent : control.csv
+
+Starting attitudes (from profiles.json, same as the paper):
+  attitude 3: 44 citizens
+  attitude 7: 56 citizens
+  mean 5.24  (44 oppose at 3, 56 support at 7)
+
+Opinion change, four categories of Figure 16 (sum to 100%):
+  category            ours   paper
+  More Polarized      56%     39%
+  Less Polarized      10%     33%
+  Opposed             34%     10%
+  Unchanged            0%     18%
+
+Where the numbers moved:
+  opposers  (start 3): mean 3 -> 5.68, 34 of 44 crossed to support
+  supporters(start 7): mean 7 -> 8.68, 0 of 56 crossed to oppose
+  population mean attitude: 5.24 -> 7.36
+
+Notes:
+  - Absolute numbers differ from the paper because of the model (14B vs
+    DeepSeek-V3); the qualitative comparison across the three arms is the
+    meaningful test. Only the control arm has been run so far.
+  - The four categories follow the paper's labels; the exact thresholds are
+    not published, so this is a faithful reconstruction.

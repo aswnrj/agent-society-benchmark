@@ -1,0 +1,708 @@
+{
+  "guncontrol_attitude_initial": {
+    "1": {
+      "Whether to support stronger gun control?": 3
+    },
+    "2": {
+      "Whether to support stronger gun control?": 3
+    },
+    "3": {
+      "Whether to support stronger gun control?": 7
+    },
+    "4": {
+      "Whether to support stronger gun control?": 7
+    },
+    "5": {
+      "Whether to support stronger gun control?": 7
+    },
+    "6": {
+      "Whether to support stronger gun control?": 7
+    },
+    "7": {
+      "Whether to support stronger gun control?": 3
+    },
+    "8": {
+      "Whether to support stronger gun control?": 3
+    },
+    "9": {
+      "Whether to support stronger gun control?": 7
+    },
+    "10": {
+      "Whether to support stronger gun control?": 7
+    },
+    "11": {
+      "Whether to support stronger gun control?": 3
+    },
+    "12": {
+      "Whether to support stronger gun control?": 7
+    },
+    "13": {
+      "Whether to support stronger gun control?": 7
+    },
+    "14": {
+      "Whether to support stronger gun control?": 3
+    },
+    "15": {
+      "Whether to support stronger gun control?": 3
+    },
+    "16": {
+      "Whether to support stronger gun control?": 7
+    },
+    "17": {
+      "Whether to support stronger gun control?": 7
+    },
+    "18": {
+      "Whether to support stronger gun control?": 7
+    },
+    "19": {
+      "Whether to support stronger gun control?": 7
+    },
+    "20": {
+      "Whether to support stronger gun control?": 3
+    },
+    "21": {
+      "Whether to support stronger gun control?": 3
+    },
+    "22": {
+      "Whether to support stronger gun control?": 3
+    },
+    "23": {
+      "Whether to support stronger gun control?": 7
+    },
+    "24": {
+      "Whether to support stronger gun control?": 3
+    },
+    "25": {
+      "Whether to support stronger gun control?": 3
+    },
+    "26": {
+      "Whether to support stronger gun control?": 3
+    },
+    "27": {
+      "Whether to support stronger gun control?": 7
+    },
+    "28": {
+      "Whether to support stronger gun control?": 7
+    },
+    "29": {
+      "Whether to support stronger gun control?": 7
+    },
+    "30": {
+      "Whether to support stronger gun control?": 7
+    },
+    "31": {
+      "Whether to support stronger gun control?": 3
+    },
+    "32": {
+      "Whether to support stronger gun control?": 7
+    },
+    "33": {
+      "Whether to support stronger gun control?": 3
+    },
+    "34": {
+      "Whether to support stronger gun control?": 3
+    },
+    "35": {
+      "Whether to support stronger gun control?": 3
+    },
+    "36": {
+      "Whether to support stronger gun control?": 7
+    },
+    "37": {
+      "Whether to support stronger gun control?": 7
+    },
+    "38": {
+      "Whether to support stronger gun control?": 3
+    },
+    "39": {
+      "Whether to support stronger gun control?": 3
+    },
+    "40": {
+      "Whether to support stronger gun control?": 7
+    },
+    "41": {
+      "Whether to support stronger gun control?": 3
+    },
+    "42": {
+      "Whether to support stronger gun control?": 3
+    },
+    "43": {
+      "Whether to support stronger gun control?": 7
+    },
+    "44": {
+      "Whether to support stronger gun control?": 7
+    },
+    "45": {
+      "Whether to support stronger gun control?": 7
+    },
+    "46": {
+      "Whether to support stronger gun control?": 3
+    },
+    "47": {
+      "Whether to support stronger gun control?": 7
+    },
+    "48": {
+      "Whether to support stronger gun control?": 7
+    },
+    "49": {
+      "Whether to support stronger gun control?": 7
+    },
+    "50": {
+      "Whether to support stronger gun control?": 7
+    },
+    "51": {
+      "Whether to support stronger gun control?": 7
+    },
+    "52": {
+      "Whether to support stronger gun control?": 3
+    },
+    "53": {
+      "Whether to support stronger gun control?": 7
+    },
+    "54": {
+      "Whether to support stronger gun control?": 3
+    },
+    "55": {
+      "Whether to support stronger gun control?": 3
+    },
+    "56": {
+      "Whether to support stronger gun control?": 7
+    },
+    "57": {
+      "Whether to support stronger gun control?": 7
+    },
+    "58": {
+      "Whether to support stronger gun control?": 7
+    },
+    "59": {
+      "Whether to support stronger gun control?": 7
+    },
+    "60": {
+      "Whether to support stronger gun control?": 7
+    },
+    "61": {
+      "Whether to support stronger gun control?": 7
+    },
+    "62": {
+      "Whether to support stronger gun control?": 7
+    },
+    "63": {
+      "Whether to support stronger gun control?": 3
+    },
+    "64": {
+      "Whether to support stronger gun control?": 7
+    },
+    "65": {
+      "Whether to support stronger gun control?": 3
+    },
+    "66": {
+      "Whether to support stronger gun control?": 7
+    },
+    "67": {
+      "Whether to support stronger gun control?": 3
+    },
+    "68": {
+      "Whether to support stronger gun control?": 7
+    },
+    "69": {
+      "Whether to support stronger gun control?": 7
+    },
+    "70": {
+      "Whether to support stronger gun control?": 7
+    },
+    "71": {
+      "Whether to support stronger gun control?": 3
+    },
+    "72": {
+      "Whether to support stronger gun control?": 7
+    },
+    "73": {
+      "Whether to support stronger gun control?": 3
+    },
+    "74": {
+      "Whether to support stronger gun control?": 7
+    },
+    "75": {
+      "Whether to support stronger gun control?": 3
+    },
+    "76": {
+      "Whether to support stronger gun control?": 3
+    },
+    "77": {
+      "Whether to support stronger gun control?": 7
+    },
+    "78": {
+      "Whether to support stronger gun control?": 7
+    },
+    "79": {
+      "Whether to support stronger gun control?": 3
+    },
+    "80": {
+      "Whether to support stronger gun control?": 7
+    },
+    "81": {
+      "Whether to support stronger gun control?": 7
+    },
+    "82": {
+      "Whether to support stronger gun control?": 7
+    },
+    "83": {
+      "Whether to support stronger gun control?": 7
+    },
+    "84": {
+      "Whether to support stronger gun control?": 3
+    },
+    "85": {
+      "Whether to support stronger gun control?": 7
+    },
+    "86": {
+      "Whether to support stronger gun control?": 7
+    },
+    "87": {
+      "Whether to support stronger gun control?": 3
+    },
+    "88": {
+      "Whether to support stronger gun control?": 7
+    },
+    "89": {
+      "Whether to support stronger gun control?": 7
+    },
+    "90": {
+      "Whether to support stronger gun control?": 3
+    },
+    "91": {
+      "Whether to support stronger gun control?": 3
+    },
+    "92": {
+      "Whether to support stronger gun control?": 3
+    },
+    "93": {
+      "Whether to support stronger gun control?": 3
+    },
+    "94": {
+      "Whether to support stronger gun control?": 7
+    },
+    "95": {
+      "Whether to support stronger gun control?": 7
+    },
+    "96": {
+      "Whether to support stronger gun control?": 3
+    },
+    "97": {
+      "Whether to support stronger gun control?": 3
+    },
+    "98": {
+      "Whether to support stronger gun control?": 3
+    },
+    "99": {
+      "Whether to support stronger gun control?": 3
+    },
+    "100": {
+      "Whether to support stronger gun control?": 3
+    }
+  },
+  "guncontrol_attitude_final": {
+    "1": {
+      "Whether to support stronger gun control?": 6
+    },
+    "2": {
+      "Whether to support stronger gun control?": 6
+    },
+    "3": {
+      "Whether to support stronger gun control?": 9
+    },
+    "4": {
+      "Whether to support stronger gun control?": 9
+    },
+    "5": {
+      "Whether to support stronger gun control?": 8.5
+    },
+    "6": {
+      "Whether to support stronger gun control?": 8.5
+    },
+    "7": {
+      "Whether to support stronger gun control?": 6
+    },
+    "8": {
+      "Whether to support stronger gun control?": 6
+    },
+    "9": {
+      "Whether to support stronger gun control?": 9
+    },
+    "10": {
+      "Whether to support stronger gun control?": 8
+    },
+    "11": {
+      "Whether to support stronger gun control?": 6
+    },
+    "12": {
+      "Whether to support stronger gun control?": 9
+    },
+    "13": {
+      "Whether to support stronger gun control?": 8
+    },
+    "14": {
+      "Whether to support stronger gun control?": 9
+    },
+    "15": {
+      "Whether to support stronger gun control?": 6
+    },
+    "16": {
+      "Whether to support stronger gun control?": 8.5
+    },
+    "17": {
+      "Whether to support stronger gun control?": 8
+    },
+    "18": {
+      "Whether to support stronger gun control?": 9
+    },
+    "19": {
+      "Whether to support stronger gun control?": 8.0
+    },
+    "20": {
+      "Whether to support stronger gun control?": 6
+    },
+    "21": {
+      "Whether to support stronger gun control?": 6
+    },
+    "22": {
+      "Whether to support stronger gun control?": 4
+    },
+    "23": {
+      "Whether to support stronger gun control?": 9
+    },
+    "24": {
+      "Whether to support stronger gun control?": 6
+    },
+    "25": {
+      "Whether to support stronger gun control?": 6
+    },
+    "26": {
+      "Whether to support stronger gun control?": 6
+    },
+    "27": {
+      "Whether to support stronger gun control?": 9
+    },
+    "28": {
+      "Whether to support stronger gun control?": 9
+    },
+    "29": {
+      "Whether to support stronger gun control?": 9
+    },
+    "30": {
+      "Whether to support stronger gun control?": 9
+    },
+    "31": {
+      "Whether to support stronger gun control?": 6
+    },
+    "32": {
+      "Whether to support stronger gun control?": 9
+    },
+    "33": {
+      "Whether to support stronger gun control?": 6
+    },
+    "34": {
+      "Whether to support stronger gun control?": 6
+    },
+    "35": {
+      "Whether to support stronger gun control?": 6
+    },
+    "36": {
+      "Whether to support stronger gun control?": 9
+    },
+    "37": {
+      "Whether to support stronger gun control?": 9
+    },
+    "38": {
+      "Whether to support stronger gun control?": 4
+    },
+    "39": {
+      "Whether to support stronger gun control?": 6
+    },
+    "40": {
+      "Whether to support stronger gun control?": 9
+    },
+    "41": {
+      "Whether to support stronger gun control?": 6
+    },
+    "42": {
+      "Whether to support stronger gun control?": 5
+    },
+    "43": {
+      "Whether to support stronger gun control?": 8.5
+    },
+    "44": {
+      "Whether to support stronger gun control?": 9
+    },
+    "45": {
+      "Whether to support stronger gun control?": 8.5
+    },
+    "46": {
+      "Whether to support stronger gun control?": 4
+    },
+    "47": {
+      "Whether to support stronger gun control?": 9
+    },
+    "48": {
+      "Whether to support stronger gun control?": 8.5
+    },
+    "49": {
+      "Whether to support stronger gun control?": 9
+    },
+    "50": {
+      "Whether to support stronger gun control?": 8.5
+    },
+    "51": {
+      "Whether to support stronger gun control?": 9
+    },
+    "52": {
+      "Whether to support stronger gun control?": 4
+    },
+    "53": {
+      "Whether to support stronger gun control?": 8
+    },
+    "54": {
+      "Whether to support stronger gun control?": 6
+    },
+    "55": {
+      "Whether to support stronger gun control?": 7
+    },
+    "56": {
+      "Whether to support stronger gun control?": 9
+    },
+    "57": {
+      "Whether to support stronger gun control?": 8.5
+    },
+    "58": {
+      "Whether to support stronger gun control?": 8.5
+    },
+    "59": {
+      "Whether to support stronger gun control?": 8.5
+    },
+    "60": {
+      "Whether to support stronger gun control?": 8
+    },
+    "61": {
+      "Whether to support stronger gun control?": 8.5
+    },
+    "62": {
+      "Whether to support stronger gun control?": 8.5
+    },
+    "63": {
+      "Whether to support stronger gun control?": 6
+    },
+    "64": {
+      "Whether to support stronger gun control?": 8.5
+    },
+    "65": {
+      "Whether to support stronger gun control?": 6
+    },
+    "66": {
+      "Whether to support stronger gun control?": 9
+    },
+    "67": {
+      "Whether to support stronger gun control?": 6
+    },
+    "68": {
+      "Whether to support stronger gun control?": 8
+    },
+    "69": {
+      "Whether to support stronger gun control?": 9
+    },
+    "70": {
+      "Whether to support stronger gun control?": 9
+    },
+    "71": {
+      "Whether to support stronger gun control?": 6
+    },
+    "72": {
+      "Whether to support stronger gun control?": 8
+    },
+    "73": {
+      "Whether to support stronger gun control?": 4
+    },
+    "74": {
+      "Whether to support stronger gun control?": 8.5
+    },
+    "75": {
+      "Whether to support stronger gun control?": 6
+    },
+    "76": {
+      "Whether to support stronger gun control?": 6
+    },
+    "77": {
+      "Whether to support stronger gun control?": 8.5
+    },
+    "78": {
+      "Whether to support stronger gun control?": 8
+    },
+    "79": {
+      "Whether to support stronger gun control?": 6
+    },
+    "80": {
+      "Whether to support stronger gun control?": 9
+    },
+    "81": {
+      "Whether to support stronger gun control?": 8.5
+    },
+    "82": {
+      "Whether to support stronger gun control?": 8.5
+    },
+    "83": {
+      "Whether to support stronger gun control?": 9
+    },
+    "84": {
+      "Whether to support stronger gun control?": 6
+    },
+    "85": {
+      "Whether to support stronger gun control?": 9
+    },
+    "86": {
+      "Whether to support stronger gun control?": 9
+    },
+    "87": {
+      "Whether to support stronger gun control?": 6
+    },
+    "88": {
+      "Whether to support stronger gun control?": 9
+    },
+    "89": {
+      "Whether to support stronger gun control?": 9
+    },
+    "90": {
+      "Whether to support stronger gun control?": 6
+    },
+    "91": {
+      "Whether to support stronger gun control?": 6
+    },
+    "92": {
+      "Whether to support stronger gun control?": 6
+    },
+    "93": {
+      "Whether to support stronger gun control?": 5
+    },
+    "94": {
+      "Whether to support stronger gun control?": 9
+    },
+    "95": {
+      "Whether to support stronger gun control?": 8.5
+    },
+    "96": {
+      "Whether to support stronger gun control?": 4
+    },
+    "97": {
+      "Whether to support stronger gun control?": 6
+    },
+    "98": {
+      "Whether to support stronger gun control?": 4
+    },
+    "99": {
+      "Whether to support stronger gun control?": 4
+    },
+    "100": {
+      "Whether to support stronger gun control?": 6
+    }
+  },
+  "guncontrol_chat_histories": {
+    "1": {},
+    "2": {},
+    "3": {},
+    "4": {},
+    "5": {},
+    "6": {},
+    "7": {},
+    "8": {},
+    "9": {},
+    "10": {},
+    "11": {},
+    "12": {},
+    "13": {},
+    "14": {},
+    "15": {},
+    "16": {},
+    "17": {},
+    "18": {},
+    "19": {},
+    "20": {},
+    "21": {},
+    "22": {},
+    "23": {},
+    "24": {},
+    "25": {},
+    "26": {},
+    "27": {},
+    "28": {},
+    "29": {},
+    "30": {},
+    "31": {},
+    "32": {},
+    "33": {},
+    "34": {},
+    "35": {},
+    "36": {},
+    "37": {},
+    "38": {},
+    "39": {},
+    "40": {},
+    "41": {},
+    "42": {},
+    "43": {},
+    "44": {},
+    "45": {},
+    "46": {},
+    "47": {},
+    "48": {},
+    "49": {},
+    "50": {},
+    "51": {},
+    "52": {},
+    "53": {},
+    "54": {},
+    "55": {},
+    "56": {},
+    "57": {},
+    "58": {},
+    "59": {},
+    "60": {},
+    "61": {},
+    "62": {},
+    "63": {},
+    "64": {},
+    "65": {},
+    "66": {},
+    "67": {},
+    "68": {},
+    "69": {},
+    "70": {},
+    "71": {},
+    "72": {},
+    "73": {},
+    "74": {},
+    "75": {},
+    "76": {},
+    "77": {},
+    "78": {},
+    "79": {},
+    "80": {},
+    "81": {},
+    "82": {},
+    "83": {},
+    "84": {},
+    "85": {},
+    "86": {},
+    "87": {},
+    "88": {},
+    "89": {},
+    "90": {},
+    "91": {},
+    "92": {},
+    "93": {},
+    "94": {},
+    "95": {},
+    "96": {},
+    "97": {},
+    "98": {},
+    "99": {},
+    "100": {}
+  }
+}

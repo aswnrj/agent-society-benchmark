@@ -1,0 +1,4 @@
+agentsociety==1.5.7
+# transitive versions that agentsociety 1.5.7 needs but does not pin tightly
+qdrant-client[fastembed]==1.12.1
+protobuf==4.24.0
